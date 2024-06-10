@@ -1,4 +1,4 @@
-dvar extendClass1 = function(SuperClass, SubClass, subMethods) {
+var extendClass1 = function(SuperClass, SubClass, subMethods) {
     SubClass.prototype = new SuperClass();
     for (var prop in SubClass.prototype) {
       if (SubClass.prototype.hasOwnProperty(prop)) {
@@ -22,7 +22,7 @@ dvar extendClass1 = function(SuperClass, SubClass, subMethods) {
     return this.width * this.height;
   };
   var Square = extendClass1(Rectangle, function(width) {
-    Rectangle.call(this, width, width);
+    Rectangle.call(this, width, width);g
   });
   var sq = new Square(5);
   console.log(sq.getArea()); 
